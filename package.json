@@ -1,0 +1,22 @@
+{
+  "name": "chat-draw-sockets",
+  "version": "1.0.0",
+  "description": "A node app that uses sockets to make a drawing and chat",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pdwkang/chat-draw.git"
+  },
+  "keywords": [
+    "socketio.nodejs.canvas"
+  ],
+  "author": "Paul Kang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pdwkang/chat-draw/issues"
+  },
+  "homepage": "https://github.com/pdwkang/chat-draw#readme"
+}
