@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/pdwkang/chat-draw/issues"
   },
-  "homepage": "https://github.com/pdwkang/chat-draw#readme"
+  "homepage": "https://github.com/pdwkang/chat-draw#readme",
+  "dependencies": {
+    "socket.io": "^1.7.2"
+  }
 }
