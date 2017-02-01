@@ -4,53 +4,38 @@
 <html>
 <head>
 	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+
 </head>
 <body>
 
- 	<h1>Hello, world</h1>
- 	<div>
- 		<h3>Enter your message here</h3>
- 		<input type='text' id='chat-message' />
- 		<input type='button' value='send!' onclick="sendChatMessage()" />
- 		<div id='userChats'></div>
- 	</div>
- 	<div id='userNames'></div>
+ 	
+
+<div class='theWholeWorld'>
+	<div class='canvas-chat-wrapper'>
+ 		<div id='userChats'>Chat go here</div>
+ 		<div id='userNames'>Usernames go here</div>
+ 		<canvas id='canvas' width='500px' height='500px'></canvas>
+	 	<div class='type-chat'>
+	 		<form onsubmit="sendChatMessage()"'>
+	 			<input  class='form-control type='text' id='chat-message' placeholder="type message here" />
+	 			<!-- <input class='btn btn-success' type='submit' value='send!' /> -->
+	 		</form>
+	 	</div>
+	 	<div class='tool-bar'>
+	 		<input type='color' id='color-picker' />
+	 		<label>Choose your marker thickness</label>
+	 		<input type='number' id='thickness' placeholder='10' />
+	 	</div>	 	
+	</div>
+</div>
+
+
+
 
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.2/socket.io.js"></script>
+	<script type="text/javascript" src="scripts.js"></script>
 
-
-
-	<script type="text/javascript">
-		// console.log($) -> console.log(io)     same concept
-		var socketio = io.connect('http://127.0.0.1:8080');
-		//once we have this connection(above) we get this whole document(index.html): only way to get this to the browser
-		socketio.on('users', (socketUsers) =>{
-			console.log(socketUsers)
-			var newHTML = "";
-			socketUsers.map((currSocket, index) => {
-				newHTML += '<li class="user">' + currSocket.name + '</li>';
-			})
-			document.getElementById('userNames').innerHTML = newHTML;
-		});
-
-		function sendChatMessage(){
-			var messageToSend = document.getElementById('chat-message').value;
-			socketio.emit('messageToServer', {
-				// messageObject
-				message: messageToSend,
-				name: "Anonymous"
-			})
-		};
-
-		socketio.on('messageToClient', (messageObject) => {
-			document.getElementById('userChats').innerHTML += '<div class="message">' + messageObject.message + '__' + messageObject.date + '</div>'
-		});
-
-
-
-
-
-
-	</script>
 </body>
 </html>

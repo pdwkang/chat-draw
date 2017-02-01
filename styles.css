@@ -1,0 +1,49 @@
+canvas{
+	border: 1px solid black;
+	position: absolute;
+	
+	top: 0;
+	left: 0;
+}
+
+#userChats{
+	height: 500px;
+	width: 400px;
+	border: 1px solid black;
+	overflow-y: auto;
+	position: absolute;
+	top: 0;
+	left: 510px;
+}
+#userNames{
+	width: 100px;
+	height: 500px;
+	left: 920px;
+	top: 0;
+	overflow-y: auto;
+	position: absolute;
+	border: 1px solid black;
+}
+.canvas-chat-wrapper{
+	position: relative;
+	margin: auto;
+	/* width: 1020px; */
+}
+
+li{
+	list-style: none;
+}
+
+.type-chat{
+	position: absolute;
+	top: 510px;
+	width: 510px;
+	background-color: blue;
+	left: 510px;
+}
+.tool-bar{
+	position: absolute;
+	top: 510px;
+	left: 0px;
+	width: 500px;
+}
