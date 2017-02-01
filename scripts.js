@@ -5,7 +5,8 @@
 // !!!!!!!!!!!! WEBSOCKET SECTION !!!!!!!!!!!!
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-var socketio = io.connect('http://127.0.0.1:8080');
+// var socketio = io.connect('http://127.0.0.1:8080');
+var socketio = io.connect('http://pauldkang.com:8080');
 // var socketio = io.connect('http://10.150.51.64:8080');
 
 //once we have this connection(above) we get this whole document(index.html): only way to get this to the browser
