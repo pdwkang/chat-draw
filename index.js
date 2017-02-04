@@ -22,7 +22,7 @@ var server = http.createServer((req, res) => {
 });
 
 // Include server version of socketIo assing it to a variable
-var socketIo = require('socket.io');
+var socketIo = require('pm2');
 // sockets are going to listen to the server which is listening on port 8080
 // sockets are piggy backing on the server listener
 var io = socketIo.listen(server);
